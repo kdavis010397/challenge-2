@@ -1,0 +1,120 @@
+//Style Agent Reset
+@use 'colors' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.9375em;
+  @media screen and (min-width: 1920px) {
+    font-size: 1.3em;
+  }
+}
+
+body {
+  margin: 8rem 14rem 0;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 375px) {
+    padding: 5rem 1rem;
+    margin: 0;
+  }
+}
+
+.cards {
+  display: flex;
+  height: 70vh;
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  @media screen and (max-width: 375px) {
+    height: max-content;
+    flex-direction: column;
+  }
+}
+
+.card {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 375px) {
+    min-height: 35rem;
+  }
+  &__icon {
+    height: auto;
+    width: 30%;
+  }
+
+  &__heading {
+    margin-top: -2rem;
+    font-family: "Big Shoulders Display";
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: $neutral-1;
+  }
+  &__description {
+    margin-top: -2rem;
+    margin-right: 2rem;
+    color: $neutral-2;
+    font-family: "Lexend Deca";
+    line-height: 1.9;
+  }
+
+  &__btn {
+    width: 10rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: $neutral-1;
+    border: 2px solid $neutral-1;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-family: "Lexend Deca";
+
+    &:hover {
+      border: 2px solid inherit;
+      background-color: transparent;
+      color: $neutral-1;
+    }
+  }
+}
+
+.btn {
+  &--1 {
+    color: $orange;
+  }
+  &--2 {
+    color: $cyan;
+  }
+  &--3 {
+    color: $dark-cyan;
+  }
+}
+
+#sedan {
+  background-color: $orange;
+}
+
+#suv {
+  background-color: $cyan;
+}
+
+#luxury {
+  background-color: $dark-cyan;
+}
+
+//Attribution styles
+.attribution {
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
